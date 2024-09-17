@@ -1,0 +1,104 @@
+Metodos de la interfaz Collection
+1) addAll(Collection<? extends E> c)
+
+Descripción: Agrega todos los elementos de la colección especificada (c)
+a la colección que invoca el método.
+
+2) iterator()
+
+    Descripción: Devuelve un Iterator sobre los elementos de la colección.
+    Funcionamiento: El Iterator permite recorrer la colección, y proporciona métodos como
+    hasNext(), next(), y remove() para iterar sobre los elementos. Este método es útil para
+    recorrer la colección de manera controlada y flexible.
+
+3) size()
+
+      Descripción: Retorna el número de elementos en la colección.
+      Funcionamiento: Devuelve un entero que representa la cantidad total de elementos en la colección.
+      Este método es útil para determinar la cantidad de elementos actuales en la colección.
+4) toArray()
+
+    Descripción: Convierte la colección en un array.
+    Funcionamiento: Este método tiene dos variantes:
+        Object[] toArray(): Convierte la colección en un array de Object.
+        <T> T[] toArray(T[] a): Convierte la colección en un array del tipo
+         especificado. Si el array proporcionado tiene suficiente capacidad,
+         los elementos de la colección se colocan en él; de lo contrario, se
+         crea un nuevo array de la misma clase del array proporcionado.
+
+
+Metodos de la interfaz List
+
+1)add(int index, E element)
+
+      Descripción: Inserta el elemento especificado (element)
+      en la posición indicada (index) en la lista.
+
+2)addAll(int index, Collection<? extends E> c)
+
+      Descripción: Inserta todos los elementos de la colección especificada (c)
+      en la lista a partir de la posición indicada (index).
+
+3)listIterator(int index)
+
+      Descripción: Devuelve un ListIterator que comienza en la posición especificada (index).
+
+4)remove(int index)
+
+      Descripción: Elimina el elemento en la posición especificada (index) de la lista.
+
+5)set(int index, E element)
+
+      Descripción: Reemplaza el elemento en la posición especificada (index) con el elemento dado (element).
+
+6)sort(Comparator<? super E> c)
+
+      Descripción: Ordena los elementos de la lista de acuerdo con el Comparator proporcionado (c).
+
+Metodos de ArrayList
+
+1) ensureCapacity(int minCapacity)
+
+       Descripción: Asegura que la capacidad del ArrayList sea al menos
+       la capacidad mínima especificada (minCapacity).
+2) removeRange(int fromIndex, int toIndex)
+
+       Descripción: Elimina un rango de elementos del ArrayList desde el índice
+       fromIndex hasta toIndex (excluyendo toIndex).
+
+2. Preguntas
+
+a)¿Qué es un Set?
+
+      Descripción: En Java, un Set es una colección que no permite elementos duplicados.
+       Los Set están diseñados para contener un conjunto de elementos únicos, es decir,
+       ningún elemento puede aparecer más de una vez dentro del mismo Set.
+
+b) ¿Qué es un SortedSet?
+
+       Descripción: SortedSet es una interfaz en Java que extiende Set y proporciona una
+       colección que mantiene sus elementos en un orden específico. Los elementos en un
+       SortedSet están ordenados de acuerdo con el orden natural de sus elementos o con un
+       Comparator proporcionado al momento de la creación del SortedSet.
+
+c)¿Qué es un Map?
+
+      Descripción: En Java, un Map es una colección que mapea claves a valores, donde cada
+      clave es única y está asociada con exactamente un valor. A diferencia de las colecciones
+      como Set y List, un Map no almacena elementos de forma secuencial, sino pares clave-valor.
+
+d) ¿Cuáles son los beneficios de las colecciones en Java?
+
+   •	Gestionar datos de manera eficiente y flexible
+   •	Gestionar grupos de objetos
+   •	Gestionar grupos de objetos que crecen y de reducen durante la vida útil
+   •	Reducen la cantidad de código que uno deba escribir
+   •	Facilitan escribir programas que se ejecutan rápido
+   •	Evitan reinventar la rueda
+   •	Al sacar un objeto de la colección no hay que “castearlo”
+   •	Pueden recibir tipos primitivos de java
+
+e) ¿Qué criterios debo tener en cuenta para escoger si utilizo LinkedList o ArrayList?
+
+   ArrayList: Mejor para acceso rápido por índice y menos modificaciones.
+   LinkedList: Mejor para muchas inserciones y eliminaciones en diferentes posiciones.
